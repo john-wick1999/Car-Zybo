@@ -1,0 +1,42 @@
+2022-07-17T11:42:04.663794200255-11:42:04 **** Incremental Build of configuration Debug for project CarTest ****
+000-make all 
+000-C:/Xilinx/Vitis/2019.2/gnuwin/bin/make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000- 
+000-C:/Xilinx/Vitis/2019.2/gnuwin/bin/make --no-print-directory main-build
+000-Building file: ../src/main.c
+000-Invoking: ARM v7 gcc compiler
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/aleja/Desktop/Projects/Car_Zybo/project_1/ZyboCarPlatform/export/ZyboCarPlatform/sw/ZyboCarPlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+000-../src/main.c: In function 'main':
+000/CarTest/src/main.c90-1-1format '%u' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]1-../src/main.c:90:28: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+000-         printf("Distance: %u cm\n\r", distance);
+000-                           ~^          ~~~~~~~~
+000-                           %lu
+000/CarTest/src/main.c53-1-1unused variable 'SettingsTable' [-Wunused-variable]1-../src/main.c:53:18: warning: unused variable 'SettingsTable' [-Wunused-variable]
+000-     TmrCntrSetup SettingsTable = {TICK_TIMER_FREQ_HZ, 0, 0, 0};
+000-                  ^~~~~~~~~~~~~
+000-../src/main.c: In function 'TickHandler':
+000/CarTest/src/main.c192-1-1variable 'StatusEvent' set but not used [-Wunused-but-set-variable]1-../src/main.c:192:9: warning: variable 'StatusEvent' set but not used [-Wunused-but-set-variable]
+000-     u32 StatusEvent;
+000-         ^~~~~~~~~~~
+000-Finished building: ../src/main.c
+000- 
+000-Building file: ../src/platform.c
+000-Invoking: ARM v7 gcc compiler
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/aleja/Desktop/Projects/Car_Zybo/project_1/ZyboCarPlatform/export/ZyboCarPlatform/sw/ZyboCarPlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+000-Finished building: ../src/platform.c
+000- 
+000-Building target: CarTest.elf
+000-Invoking: ARM v7 gcc linker
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/aleja/Desktop/Projects/Car_Zybo/project_1/ZyboCarPlatform/export/ZyboCarPlatform/sw/ZyboCarPlatform/standalone_domain/bsplib/lib -o "CarTest.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-Finished building target: CarTest.elf
+000- 
+000-Invoking: ARM v7 Print Size
+000-arm-none-eabi-size CarTest.elf  |tee "CarTest.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  70240	   3416	  23440	  97096	  17b48	CarTest.elf
+000-Finished building: CarTest.elf.size
+000- 
+00255-
+11:42:06 Build Finished (took 1s.539ms)
+

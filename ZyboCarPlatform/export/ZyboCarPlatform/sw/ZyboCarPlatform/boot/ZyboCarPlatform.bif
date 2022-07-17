@@ -1,0 +1,7 @@
+/*ZyboCarPlatform*/
+the_ROM_image:
+{
+  [bootloader]<ZyboCarPlatform/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}
